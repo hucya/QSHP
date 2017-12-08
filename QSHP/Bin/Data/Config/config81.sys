@@ -1,0 +1,122 @@
+<DriverConfig>
+  <Drivers>
+    <AmpC>
+      <X_Axis Type="QSHP.HW.AmpC.CopleyAmpC">
+        <CopleyAmpC Driver="0" Index="1">
+  <Param p2:type="CopleyAxisCArgs" xmlns:p2="http://www.w3.org/2001/XMLSchema-instance">
+    <StepPos>10</StepPos>
+    <MaxAcc>50</MaxAcc>
+    <MaxVel>400</MaxVel>
+    <MaxPos>600</MaxPos>
+    <StartPos>500</StartPos>
+    <HomeOffset>30</HomeOffset>
+    <HomeAcc>30</HomeAcc>
+    <HomeVel>5</HomeVel>
+    <WorkAcc>2</WorkAcc>
+    <WorkVel>5</WorkVel>
+    <JogVel>10</JogVel>
+    <JogAcc>4</JogAcc>
+    <JogVelSlow>3</JogVelSlow>
+    <JogAccSlow>1</JogAccSlow>
+    <PerCTS>2000</PerCTS>
+    <SoftNlimit>0</SoftNlimit>
+    <SoftPlimit>0</SoftPlimit>
+    <HomeMode>PLimit</HomeMode>
+    <DualEncoder>false</DualEncoder>
+    <HLimitMode>INPUT_CONFIGURATION_HOME_HIGH</HLimitMode>
+    <NLimitMode>INPUT_CONFIGURATION_NEGATIVE_LIMIT_HIGH</NLimitMode>
+    <PLimitMode>INPUT_CONFIGURATION_POSITIVE_LIMIT_HIGH</PLimitMode>
+  </Param>
+</CopleyAmpC>
+      </X_Axis>
+      <Y_Axis Type="QSHP.HW.AmpC.CopleyAmpC">
+        <CopleyAmpC Driver="0" Index="2">
+  <Param p2:type="CopleyAxisCArgs" xmlns:p2="http://www.w3.org/2001/XMLSchema-instance">
+    <StepPos>10</StepPos>
+    <MaxAcc>50</MaxAcc>
+    <MaxVel>400</MaxVel>
+    <MaxPos>400</MaxPos>
+    <StartPos>0</StartPos>
+    <HomeOffset>0</HomeOffset>
+    <HomeAcc>2</HomeAcc>
+    <HomeVel>5</HomeVel>
+    <WorkAcc>2</WorkAcc>
+    <WorkVel>5</WorkVel>
+    <JogVel>10</JogVel>
+    <JogAcc>4</JogAcc>
+    <JogVelSlow>3</JogVelSlow>
+    <JogAccSlow>1</JogAccSlow>
+    <PerCTS>2000</PerCTS>
+    <SoftNlimit>0</SoftNlimit>
+    <SoftPlimit>0</SoftPlimit>
+    <HomeMode>PLimit</HomeMode>
+    <DualEncoder>false</DualEncoder>
+    <HLimitMode>INPUT_CONFIGURATION_HOME_HIGH</HLimitMode>
+    <NLimitMode>INPUT_CONFIGURATION_NEGATIVE_LIMIT_HIGH</NLimitMode>
+    <PLimitMode>INPUT_CONFIGURATION_POSITIVE_LIMIT_HIGH</PLimitMode>
+  </Param>
+</CopleyAmpC>
+      </Y_Axis>
+<Z_Axis Type="QSHP.HW.AmpC.CopleyAmpC">
+        <CopleyAmpC Driver="0" Index="3">
+  <Param p2:type="CopleyAxisCArgs" xmlns:p2="http://www.w3.org/2001/XMLSchema-instance">
+    <StepPos>10</StepPos>
+    <MaxAcc>50</MaxAcc>
+    <MaxVel>400</MaxVel>
+    <MaxPos>600</MaxPos>
+    <StartPos>500</StartPos>
+    <HomeOffset>30</HomeOffset>
+    <HomeAcc>30</HomeAcc>
+    <HomeVel>5</HomeVel>
+    <WorkAcc>2</WorkAcc>
+    <WorkVel>5</WorkVel>
+    <JogVel>10</JogVel>
+    <JogAcc>4</JogAcc>
+    <JogVelSlow>3</JogVelSlow>
+    <JogAccSlow>1</JogAccSlow>
+    <PerCTS>2000</PerCTS>
+    <SoftNlimit>0</SoftNlimit>
+    <SoftPlimit>0</SoftPlimit>
+    <HomeMode>PLimit</HomeMode>
+    <DualEncoder>false</DualEncoder>
+    <HLimitMode>INPUT_CONFIGURATION_HOME_HIGH</HLimitMode>
+    <NLimitMode>INPUT_CONFIGURATION_NEGATIVE_LIMIT_HIGH</NLimitMode>
+    <PLimitMode>INPUT_CONFIGURATION_POSITIVE_LIMIT_HIGH</PLimitMode>
+  </Param>
+</CopleyAmpC>
+      </Z_Axis>
+      <T_Axis Type="QSHP.HW.AmpC.G3DrvAmpC">
+        <G3DrvAmpC Driver="3" Index="0">
+  <Param>
+    <StepPos>10</StepPos>
+    <MaxAcc>50</MaxAcc>
+    <MaxVel>400</MaxVel>
+    <MaxPos>400</MaxPos>
+    <StartPos>0</StartPos>
+    <HomeOffset>0</HomeOffset>
+    <HomeAcc>2</HomeAcc>
+    <HomeVel>5</HomeVel>
+    <WorkAcc>2</WorkAcc>
+    <WorkVel>5</WorkVel>
+    <JogVel>10</JogVel>
+    <JogAcc>4</JogAcc>
+    <JogVelSlow>3</JogVelSlow>
+    <JogAccSlow>1</JogAccSlow>
+    <PerCTS>2000</PerCTS>
+    <SoftNlimit>0</SoftNlimit>
+    <SoftPlimit>0</SoftPlimit>
+    <HomeMode>PLimit</HomeMode>
+  </Param>
+  <errCode>255</errCode>
+</G3DrvAmpC>
+      </T_Axis>
+    </AmpC>
+    <SPD>
+      <SPD Type="QSHP.HW.Spindle.SMSpindleProvider" Driver="1" Index="2" Sampling="100" />
+    </SPD>
+    <CCD DoubleCap="True">
+      <CCD Type="QSHP.HW.Video.MVCCaptureProvider" Index="0" Name="MVCCamera" Gain="30" Binning="False" Exposure="300" Scale="0.0025" AdcMode="2" />
+      <CCD2 Type="QSHP.HW.Video.MVCCaptureProvider" Index="0" Name="MVCCamera" Gain="30" Binning="False" Exposure="300" Scale="0.0025" AdcMode="2" />
+    </CCD>
+  </Drivers>
+</DriverConfig>

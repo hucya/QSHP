@@ -1,0 +1,780 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{04567ABF-0DCA-475F-B0ED-C2A01D25962C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QSHP</RootNamespace>
+    <AssemblyName>QSHP</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>发布\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>Bin\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>Bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>QSHP.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CMO, Version=1.0.0.1, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Bin\CMO.DLL</HintPath>
+    </Reference>
+    <Reference Include="Interop.DRV02CTLLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>Bin\Driver\Interop.DRV02CTLLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.PCOMMSERVERLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>Bin\Driver\Interop.PCOMMSERVERLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Speech" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommonPart.cs" />
+    <Compile Include="Com\BitmapHelper.cs" />
+    <Compile Include="Com\CheckSum.cs" />
+    <Compile Include="Com\DataConverter.cs" />
+    <Compile Include="Com\DLLWrapper.cs" />
+    <Compile Include="Com\MachineInfo.cs" />
+    <Compile Include="LogHelper.cs" />
+    <Compile Include="Com\NativeMethods.cs" />
+    <Compile Include="Data\AxisParams.cs" />
+    <Compile Include="Data\BldData.cs" />
+    <Compile Include="Data\CutChannel.cs" />
+    <Compile Include="Data\CutGroup.cs" />
+    <Compile Include="Data\CutLine.cs" />
+    <Compile Include="Data\CutChip.cs" />
+    <Compile Include="Data\CutSegment.cs" />
+    <Compile Include="Data\DataBase.cs" />
+    <Compile Include="Data\DevData.cs" />
+    <Compile Include="Data\IOData.cs" />
+    <Compile Include="Data\MacData.cs" />
+    <Compile Include="Data\PreData.cs" />
+    <Compile Include="Data\Serialize.cs" />
+    <Compile Include="Data\AppConfig.cs" />
+    <Compile Include="Data\TabData.cs" />
+    <Compile Include="GlobalsPart.cs" />
+    <Compile Include="HW\AmpC\DeltaAmpC.cs" />
+    <Compile Include="HW\CanOpenConnecter.cs" />
+    <Compile Include="HW\IOList.cs" />
+    <Compile Include="HW\IO\CopleyIOProvider.cs" />
+    <Compile Include="HW\IO\DigProvider.cs" />
+    <Compile Include="HW\IO\IOParamArgs.cs" />
+    <Compile Include="HW\IO\PmacIOParams.cs" />
+    <Compile Include="HW\IO\PmacIOProvider.cs" />
+    <Compile Include="LockScreenForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LockScreenForm.Designer.cs">
+      <DependentUpon>LockScreenForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Logo.Designer.cs">
+      <DependentUpon>Logo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProcessCmd.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="SysCmd.cs" />
+    <Compile Include="UI\Bld\BladeAlignmentManger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Bld\BladeAlignmentManger.Designer.cs">
+      <DependentUpon>BladeAlignmentManger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Bld\BladeFileManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Bld\BladeFileManager.Designer.cs">
+      <DependentUpon>BladeFileManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Bld\BladeMessageFrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Bld\BladeMessageFrom.Designer.cs">
+      <DependentUpon>BladeMessageFrom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Bld\BladeRepalceManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Bld\BladeRepalceManager.Designer.cs">
+      <DependentUpon>BladeRepalceManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Bld\BladeCirTabEditManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Bld\BladeCirTabEditManager.Designer.cs">
+      <DependentUpon>BladeCirTabEditManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Bld\BladeRecTabEditManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Bld\BladeRecTabEditManager.Designer.cs">
+      <DependentUpon>BladeRecTabEditManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Bld\BladeTestDataEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Bld\BladeTestDataEdit.Designer.cs">
+      <DependentUpon>BladeTestDataEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Bld\BladeTestDataManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Bld\BladeTestDataManager.Designer.cs">
+      <DependentUpon>BladeTestDataManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Bld\BladeTestHeightManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Bld\BladeTestHeightManager.Designer.cs">
+      <DependentUpon>BladeTestHeightManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Ctr\GroupBoxEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\Ctr\ComboBoxEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\Ctr\PictureBoxEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\Ctr\ProgressBarEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\Ctr\TrackBarEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\Dev\DevAlignDataManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Dev\DevAlignDataManager.Designer.cs">
+      <DependentUpon>DevAlignDataManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Dev\DevDataManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Dev\DevDataManager.Designer.cs">
+      <DependentUpon>DevDataManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Dev\DevLedCfgManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Dev\DevLedCfgManager.Designer.cs">
+      <DependentUpon>DevLedCfgManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\File\AnySegmentManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\File\AnySegmentManager.Designer.cs">
+      <DependentUpon>AnySegmentManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Dev\DevAlignedCenterManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Dev\DevAlignedCenterManager.Designer.cs">
+      <DependentUpon>DevAlignedCenterManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Dev\DevPixelFactorManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Dev\DevPixelFactorManager.Designer.cs">
+      <DependentUpon>DevPixelFactorManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\LogerViewManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\LogerViewManager.Designer.cs">
+      <DependentUpon>LogerViewManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Mac\SystemConfigManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Mac\SystemConfigManager.Designer.cs">
+      <DependentUpon>SystemConfigManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Cut\CutAlignManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Cut\CutAlignManager.Designer.cs">
+      <DependentUpon>CutAlignManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Cut\CutStatusManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Cut\CutStatusManager.Designer.cs">
+      <DependentUpon>CutStatusManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Cut\CutPauseManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Cut\CutPauseManager.Designer.cs">
+      <DependentUpon>CutPauseManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\File\PreCutDataManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\File\PreCutDataManager.Designer.cs">
+      <DependentUpon>PreCutDataManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Mac\SystemDataManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Mac\SystemDataManager.Designer.cs">
+      <DependentUpon>SystemDataManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Mac\SystemSpeParamsManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Mac\SystemSpeParamsManager.Designer.cs">
+      <DependentUpon>SystemSpeParamsManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Mac\SystemAxisCtrManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Mac\SystemAxisCtrManager.Designer.cs">
+      <DependentUpon>SystemAxisCtrManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Mac\SystemDigIOManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Mac\SystemDigIOManager.Designer.cs">
+      <DependentUpon>SystemDigIOManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Mac\SystemIOControlManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Mac\SystemIOControlManager.Designer.cs">
+      <DependentUpon>SystemIOControlManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Mac\SystemAnalogManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Mac\SystemAnalogManager.Designer.cs">
+      <DependentUpon>SystemAnalogManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\User\AlignFormBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\User\AlignFormBase.Designer.cs">
+      <DependentUpon>AlignFormBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\User\ChannelCtr.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\User\ChannelCtr.Designer.cs">
+      <DependentUpon>ChannelCtr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\File\AnyChannelManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\File\AnyChannelManager.Designer.cs">
+      <DependentUpon>AnyChannelManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\File\CutDataManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\File\CutDataManager.Designer.cs">
+      <DependentUpon>CutDataManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\File\FileManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\File\FileManager.Designer.cs">
+      <DependentUpon>FileManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Test\Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Test\Form3.designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Test\Form5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Test\Form5.Designer.cs">
+      <DependentUpon>Form5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Globals.cs" />
+    <Compile Include="HW\AmpC\AmpCProvider.cs" />
+    <Compile Include="HW\AmpC\CopleyAmpC.cs" />
+    <Compile Include="HW\AmpC\CopleyAxisParams.cs" />
+    <Compile Include="HW\AmpC\G3DrvAmpC.cs" />
+    <Compile Include="HW\AmpC\IAmpCProvider.cs" />
+    <Compile Include="HW\AmpC\PmacAmpC.cs" />
+    <Compile Include="HW\AmpC\PmacAxisParams.cs" />
+    <Compile Include="Common.cs" />
+    <Compile Include="HW\CopleyConnecter.cs" />
+    <Compile Include="HW\G3DrvConnecter.cs" />
+    <Compile Include="HW\HardwareProvider.cs" />
+    <Compile Include="HW\HardwareType.cs" />
+    <Compile Include="HW\IO\IOProvider.cs" />
+    <Compile Include="HW\PmacConnecter.cs" />
+    <Compile Include="HW\Spindle\ISpindleProvider.cs" />
+    <Compile Include="HW\Spindle\SMSpindleProvider.cs" />
+    <Compile Include="HW\Spindle\SpindleEventArgs.cs" />
+    <Compile Include="HW\Spindle\SpindProvider.cs" />
+    <Compile Include="HW\Spindle\VFSpindleProvider.cs" />
+    <Compile Include="SystemStatus.cs" />
+    <Compile Include="HW\Video\IVideoProvider.cs" />
+    <Compile Include="HW\Video\MVCCaptureProvider.cs" />
+    <Compile Include="HW\Video\SrceenCaptureProvider.cs" />
+    <Compile Include="Com\BitmapQuality.cs" />
+    <Compile Include="Com\GrayImage.cs" />
+    <Compile Include="Com\LinearMath.cs" />
+    <Compile Include="Com\RotateMath.cs" />
+    <Compile Include="SIM\PIDProvider.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SIM\MotorModel.cs" />
+    <Compile Include="SIM\SimModel.cs" />
+    <Compile Include="SIM\SPDModel.cs" />
+    <Compile Include="UI\Ctr\AxisControlEx.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Ctr\AxisControlEx.designer.cs">
+      <DependentUpon>AxisControlEx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\User\BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\User\BaseForm.Designer.cs">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Ctr\ButtonEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\User\CaptureViewEx.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\User\CaptureViewEx.designer.cs">
+      <DependentUpon>CaptureViewEx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Ctr\DigitalEx.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Ctr\KeyboardButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\Ctr\KeyPad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Ctr\KeyPad.designer.cs">
+      <DependentUpon>KeyPad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Ctr\LedEx.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Ctr\LedShow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Test\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Test\Form1.designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Ctr\PanelEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\Ctr\TabControlEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\User\FormArgs.cs" />
+    <Compile Include="UI\HomeScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MidScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MidScreen.Designer.cs">
+      <DependentUpon>MidScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\User\ChannelCtrList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\User\ChannelCtrList.Designer.cs">
+      <DependentUpon>ChannelCtrList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\User\MonitorEx.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\User\MonitorEx.designer.cs">
+      <DependentUpon>MonitorEx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Ctr\NumberEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\Ctr\TextBoxEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\Ctr\TreeViewEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\Ctr\VideoControlEx.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Ctr\VideoControlEx.designer.cs">
+      <DependentUpon>VideoControlEx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\User\SegmentCtr.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\User\SegmentCtr.Designer.cs">
+      <DependentUpon>SegmentCtr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\User\TopBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\User\TopBar.Designer.cs">
+      <DependentUpon>TopBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Ctr\UnderAxis.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Ctr\UnderAxis.Designer.cs">
+      <DependentUpon>UnderAxis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\User\UnderBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\User\UnderBar.designer.cs">
+      <DependentUpon>UnderBar.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="LockScreenForm.resx">
+      <DependentUpon>LockScreenForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Logo.resx">
+      <DependentUpon>Logo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Bld\BladeAlignmentManger.resx">
+      <DependentUpon>BladeAlignmentManger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Bld\BladeFileManager.resx">
+      <DependentUpon>BladeFileManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Bld\BladeMessageFrom.resx">
+      <DependentUpon>BladeMessageFrom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Bld\BladeRepalceManager.resx">
+      <DependentUpon>BladeRepalceManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Bld\BladeCirTabEditManager.resx">
+      <DependentUpon>BladeCirTabEditManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Bld\BladeRecTabEditManager.resx">
+      <DependentUpon>BladeRecTabEditManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Bld\BladeTestDataEdit.resx">
+      <DependentUpon>BladeTestDataEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Bld\BladeTestDataManager.resx">
+      <DependentUpon>BladeTestDataManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Bld\BladeTestHeightManager.resx">
+      <DependentUpon>BladeTestHeightManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Ctr\GroupBoxEx.resx">
+      <DependentUpon>GroupBoxEx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Dev\DevAlignDataManager.resx">
+      <DependentUpon>DevAlignDataManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Dev\DevDataManager.resx">
+      <DependentUpon>DevDataManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Dev\DevLedCfgManager.resx">
+      <DependentUpon>DevLedCfgManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\File\AnySegmentManager.resx">
+      <DependentUpon>AnySegmentManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\File\PreCutDataManager.resx">
+      <DependentUpon>PreCutDataManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Dev\DevAlignedCenterManager.resx">
+      <DependentUpon>DevAlignedCenterManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Dev\DevPixelFactorManager.resx">
+      <DependentUpon>DevPixelFactorManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\LogerViewManager.resx">
+      <DependentUpon>LogerViewManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Mac\SystemConfigManager.resx">
+      <DependentUpon>SystemConfigManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Cut\CutAlignManager.resx">
+      <DependentUpon>CutAlignManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Cut\CutStatusManager.resx">
+      <DependentUpon>CutStatusManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Cut\CutPauseManager.resx">
+      <DependentUpon>CutPauseManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Mac\SystemDataManager.resx">
+      <DependentUpon>SystemDataManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Mac\SystemSpeParamsManager.resx">
+      <DependentUpon>SystemSpeParamsManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Mac\SystemAxisCtrManager.resx">
+      <DependentUpon>SystemAxisCtrManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Mac\SystemDigIOManager.resx">
+      <DependentUpon>SystemDigIOManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Mac\SystemIOControlManager.resx">
+      <DependentUpon>SystemIOControlManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Mac\SystemAnalogManager.resx">
+      <DependentUpon>SystemAnalogManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\User\AlignFormBase.resx">
+      <DependentUpon>AlignFormBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\User\ChannelCtr.resx">
+      <DependentUpon>ChannelCtr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\File\AnyChannelManager.resx">
+      <DependentUpon>AnyChannelManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\File\CutDataManager.resx">
+      <DependentUpon>CutDataManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\File\FileManager.resx">
+      <DependentUpon>FileManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Test\Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Test\Form5.resx">
+      <DependentUpon>Form5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UI\Ctr\AxisControlEx.resx">
+      <DependentUpon>AxisControlEx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\User\CaptureViewEx.resx">
+      <DependentUpon>CaptureViewEx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\User\BaseForm.resx">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Ctr\KeyPad.resx">
+      <DependentUpon>KeyPad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Ctr\LedShow.resx">
+      <DependentUpon>LedShow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Test\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\HomeScreen.resx">
+      <DependentUpon>HomeScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MidScreen.resx">
+      <DependentUpon>MidScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\User\ChannelCtrList.resx">
+      <DependentUpon>ChannelCtrList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\User\MonitorEx.resx">
+      <DependentUpon>MonitorEx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Ctr\VideoControlEx.resx">
+      <DependentUpon>VideoControlEx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\User\SegmentCtr.resx">
+      <DependentUpon>SegmentCtr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\User\TopBar.resx">
+      <DependentUpon>TopBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Ctr\UnderAxis.resx">
+      <DependentUpon>UnderAxis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\User\UnderBar.resx">
+      <DependentUpon>UnderBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\app.manifest">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Com\readme.txt" />
+    <Content Include="HW\readme.txt" />
+    <Content Include="logo.ico" />
+    <None Include="Resources\logo.gif" />
+    <None Include="Properties\DataSources\CmdOles.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Resources\FCLOG.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\DataSources\QSHP.Data.BldData.datasource" />
+    <None Include="Properties\DataSources\QSHP.Data.CutChannel.datasource" />
+    <None Include="Properties\DataSources\QSHP.Data.CutGroup.datasource" />
+    <None Include="Resources\logo.png" />
+    <None Include="Resources\ExpandImage.png" />
+    <None Include="Resources\CollapseImage.png" />
+    <None Include="Resources\logo-1.png" />
+    <None Include="Resources\QSHP.otf" />
+    <None Include="Resources\Warn.png" />
+    <None Include="Resources\OK.png" />
+    <None Include="Resources\None.png" />
+    <None Include="Resources\Error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

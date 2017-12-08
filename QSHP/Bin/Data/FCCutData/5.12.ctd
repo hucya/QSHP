@@ -1,0 +1,89 @@
+<CutGroup>
+  <LeftTopPoint>
+    <X>100</X>
+    <Y>100</Y>
+  </LeftTopPoint>
+  <Enable>true</Enable>
+  <Order>true</Order>
+  <Fixed>true</Fixed>
+  <BackSpeed>200</BackSpeed>
+  <CutDir>Positive</CutDir>
+  <CutMode>Stand</CutMode>
+  <ReDepth>2</ReDepth>
+  <ReDepth2>0</ReDepth2>
+  <FilmHeight>0.07</FilmHeight>
+  <WorkerHeight>2</WorkerHeight>
+  <Width>100</Width>
+  <Length>100</Length>
+  <PreWidth>0</PreWidth>
+  <CHs>
+    <CutChannel Index="0">
+      <Speed>50</Speed>
+      <ReDepth>5</ReDepth>
+      <ReDepth2>0</ReDepth2>
+      <Enable>true</Enable>
+      <IndexStep>1</IndexStep>
+      <TotalNum>50</TotalNum>
+      <AlignPoint>
+        <X>250</X>
+        <Y>200</Y>
+      </AlignPoint>
+      <KnieffLineWidth>30</KnieffLineWidth>
+      <IndexStep2>0</IndexStep2>
+      <YPosAdj>0</YPosAdj>
+      <TPosAdj>0</TPosAdj>
+      <AlignT>30</AlignT>
+      <TestHeightTick>0</TestHeightTick>
+      <PauseTick>0</PauseTick>
+      <Segs />
+      <Style>BackToFront</Style>
+      <CycleCount>0</CycleCount>
+      <TRoatePos>30</TRoatePos>
+      <PauseMode>0</PauseMode>
+    </CutChannel>
+    <CutChannel Index="1">
+      <Speed>35</Speed>
+      <ReDepth>5</ReDepth>
+      <ReDepth2>0</ReDepth2>
+      <Enable>true</Enable>
+      <IndexStep>1</IndexStep>
+      <TotalNum>20</TotalNum>
+      <AlignPoint>
+        <X>250</X>
+        <Y>200</Y>
+      </AlignPoint>
+      <KnieffLineWidth>30</KnieffLineWidth>
+      <IndexStep2>0</IndexStep2>
+      <YPosAdj>0</YPosAdj>
+      <TPosAdj>0</TPosAdj>
+      <AlignT>30</AlignT>
+      <TestHeightTick>0</TestHeightTick>
+      <PauseTick>0</PauseTick>
+      <Segs />
+      <Style>BackToFront</Style>
+      <CycleCount>0</CycleCount>
+      <TRoatePos>120</TRoatePos>
+      <PauseMode>0</PauseMode>
+    </CutChannel>
+  </CHs>
+  <SpdSpeed>20000</SpdSpeed>
+  <Multiple>false</Multiple>
+  <OncePiece>false</OncePiece>
+  <ChipS />
+  <ExitPosMode>0</ExitPosMode>
+  <ExitXpos>300</ExitXpos>
+  <ExitYpos>200</ExitYpos>
+  <ExitTpos>30</ExitTpos>
+  <SpdStabled>false</SpdStabled>
+  <PreCut>
+    <UserData />
+    <Index>0</Index>
+    <ID>std</ID>
+    <AutoMode>true</AutoMode>
+    <StartSpeed>5</StartSpeed>
+    <EndSpeed>50</EndSpeed>
+    <IncSpeed>5</IncSpeed>
+    <PreLine>5</PreLine>
+    <Enable>false</Enable>
+  </PreCut>
+</CutGroup>

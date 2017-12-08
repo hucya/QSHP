@@ -1,0 +1,232 @@
+<DriverConfig>
+  <Drivers>
+    <AmpC>
+      <X_Axis Type="QSHP.HW.AmpC.PmacAmpC">
+        <Params Driver="0" Index="1" Type="QSHP.HW.AmpC.PmacAxisParams">
+          <PmacAmpCArgs>
+  <StepPos>10</StepPos>
+  <MaxAcc>50</MaxAcc>
+  <MaxVel>400</MaxVel>
+  <MaxPos>400</MaxPos>
+  <StartPos>300</StartPos>
+  <HomeOffset>40</HomeOffset>
+  <HomeAcc>2</HomeAcc>
+  <HomeVel>50</HomeVel>
+  <WorkAcc>2</WorkAcc>
+  <WorkVel>80</WorkVel>
+  <JogVel>50</JogVel>
+  <JogAcc>5</JogAcc>
+  <JogVelSlow>2</JogVelSlow>
+  <JogAccSlow>1</JogAccSlow>
+  <PerCTS>1000</PerCTS>
+  <SoftNlimit>62</SoftNlimit>
+  <SoftPlimit>337</SoftPlimit>
+  <HomeMode>PLimit</HomeMode>
+  <PosLimitCaptureMode>2</PosLimitCaptureMode>
+  <NegLimitCaptureMode>2</NegLimitCaptureMode>
+  <HomeLimitCaptureMode>10</HomeLimitCaptureMode>
+  <UserLimitCaptureMode>10</UserLimitCaptureMode>
+  <ModeControl>8388609</ModeControl>
+</PmacAmpCArgs>
+        </Params>
+      </X_Axis>
+      <Y_Axis Type="QSHP.HW.AmpC.PmacAmpC">
+        <Params Driver="0" Index="2" Type="QSHP.HW.AmpC.PmacAxisParams">
+          <PmacAmpCArgs>
+  <StepPos>10</StepPos>
+  <MaxAcc>50</MaxAcc>
+  <MaxVel>400</MaxVel>
+  <MaxPos>400</MaxPos>
+  <StartPos>200</StartPos>
+  <HomeOffset>80</HomeOffset>
+  <HomeAcc>2</HomeAcc>
+  <HomeVel>25</HomeVel>
+  <WorkAcc>1</WorkAcc>
+  <WorkVel>40</WorkVel>
+  <JogVel>25</JogVel>
+  <JogAcc>0.5</JogAcc>
+  <JogVelSlow>0.05</JogVelSlow>
+  <JogAccSlow>2</JogAccSlow>
+  <PerCTS>2000</PerCTS>
+  <SoftNlimit>120</SoftNlimit>
+  <SoftPlimit>300</SoftPlimit>
+  <HomeMode>NLimit</HomeMode>
+  <PosLimitCaptureMode>2</PosLimitCaptureMode>
+  <NegLimitCaptureMode>2</NegLimitCaptureMode>
+  <HomeLimitCaptureMode>10</HomeLimitCaptureMode>
+  <UserLimitCaptureMode>10</UserLimitCaptureMode>
+  <ModeControl>8388609</ModeControl>
+</PmacAmpCArgs>
+        </Params>
+      </Y_Axis>
+      <Z_Axis Type="QSHP.HW.AmpC.PmacAmpC">
+        <Params Driver="0" Index="3" Type="QSHP.HW.AmpC.PmacAxisParams">
+          <PmacAmpCArgs>
+  <StepPos>10</StepPos>
+  <MaxAcc>50</MaxAcc>
+  <MaxVel>400</MaxVel>
+  <MaxPos>400</MaxPos>
+  <StartPos>30</StartPos>
+  <HomeOffset>5</HomeOffset>
+  <HomeAcc>0.5</HomeAcc>
+  <HomeVel>8</HomeVel>
+  <WorkAcc>2</WorkAcc>
+  <WorkVel>5</WorkVel>
+  <JogVel>8</JogVel>
+  <JogAcc>0.5</JogAcc>
+  <JogVelSlow>1.5</JogVelSlow>
+  <JogAccSlow>0.5</JogAccSlow>
+  <PerCTS>1000</PerCTS>
+  <SoftNlimit>9</SoftNlimit>
+  <SoftPlimit>36</SoftPlimit>
+  <HomeMode>PLimit</HomeMode>
+  <PosLimitCaptureMode>2</PosLimitCaptureMode>
+  <NegLimitCaptureMode>2</NegLimitCaptureMode>
+  <HomeLimitCaptureMode>10</HomeLimitCaptureMode>
+  <UserLimitCaptureMode>10</UserLimitCaptureMode>
+  <ModeControl>8388609</ModeControl>
+</PmacAmpCArgs>
+        </Params>
+      </Z_Axis>
+      <T_Axis Type="QSHP.HW.AmpC.PmacAmpC">
+        <Params Driver="0" Index="4" Type="QSHP.HW.AmpC.PmacAxisParams">
+          <PmacAmpCArgs>
+  <StepPos>10</StepPos>
+  <MaxAcc>50</MaxAcc>
+  <MaxVel>400</MaxVel>
+  <MaxPos>400</MaxPos>
+  <StartPos>30</StartPos>
+  <HomeOffset>25</HomeOffset>
+  <HomeAcc>1</HomeAcc>
+  <HomeVel>30</HomeVel>
+  <WorkAcc>0.5</WorkAcc>
+  <WorkVel>80</WorkVel>
+  <JogVel>30</JogVel>
+  <JogAcc>1</JogAcc>
+  <JogVelSlow>2</JogVelSlow>
+  <JogAccSlow>0.5</JogAccSlow>
+  <PerCTS>500</PerCTS>
+  <SoftNlimit>5</SoftNlimit>
+  <SoftPlimit>380</SoftPlimit>
+  <HomeMode>NLimit</HomeMode>
+  <PosLimitCaptureMode>2</PosLimitCaptureMode>
+  <NegLimitCaptureMode>2</NegLimitCaptureMode>
+  <HomeLimitCaptureMode>10</HomeLimitCaptureMode>
+  <UserLimitCaptureMode>10</UserLimitCaptureMode>
+  <ModeControl>8388609</ModeControl>
+</PmacAmpCArgs>
+        </Params>
+      </T_Axis>
+    </AmpC>
+    <Spindle>
+      <SPD Type="QSHP.HW.Spindle.VFSpindleProvider">
+        <VFSpindleProvider Sampling="50" Driver="1" Index="1" Baud="9600"/>
+      </SPD>
+    </Spindle>
+    <Capture DoubleCap="False">
+      <CCD Type="QSHP.HW.Video.MVCCaptureProvider">
+        <MVCCaptureProvider>
+  <Index>0</Index>
+  <Size>
+    <Width>516</Width>
+    <Height>480</Height>
+  </Size>
+  <Scale>0.00266</Scale>
+  <AdcMode>2</AdcMode>
+  <Exposure>300</Exposure>
+  <Gain>30</Gain>
+  <BinningMode>false</BinningMode>
+</MVCCaptureProvider>
+      </CCD>
+    </Capture>
+    <Digital>
+      <DI IsOutPut="False" Mask="FFFFFFFF" Used="FFFFFFFF" Status="0" />
+      <DO IsOutPut="True" Mask="3" Used="FFFFFFFF" Status="0" />
+      <Hardware Type="QSHP.HW.IO.PmacIOProvider">
+        <PmacIOProvider Index="0">
+  <Params p2:type="PmacIOArgs" xmlns:p2="http://www.w3.org/2001/XMLSchema-instance">
+    <BaseAddress>78400</BaseAddress>
+    <InputBitCmd>
+      <string>M0</string>
+      <string>M1</string>
+      <string>M2</string>
+      <string>M3</string>
+      <string>M4</string>
+      <string>M5</string>
+      <string>M6</string>
+      <string>M7</string>
+      <string>M8</string>
+      <string>M9</string>
+      <string>M10</string>
+      <string>M11</string>
+      <string>M12</string>
+      <string>M13</string>
+      <string>M14</string>
+      <string>M15</string>
+    </InputBitCmd>
+    <OutputBitCmd>
+      <string>M16</string>
+      <string>M17</string>
+      <string>M18</string>
+      <string>M19</string>
+      <string>M20</string>
+      <string>M21</string>
+      <string>M22</string>
+      <string>M23</string>
+      <string>M24</string>
+      <string>M25</string>
+      <string>M26</string>
+      <string>M27</string>
+      <string>M28</string>
+      <string>M29</string>
+      <string>M30</string>
+      <string>M31</string>
+    </OutputBitCmd>
+    <InitCmd>
+      <string>M32=$00FF</string>
+      <string>M34=0</string>
+      <string>M40=0</string>
+      <string>M42=$FFFF</string>
+    </InitCmd>
+    <OutputByte>
+      <PmacAddress>
+        <Name>M8111</Name>
+        <Type>Y</Type>
+        <Address>78400</Address>
+        <Start>0</Start>
+        <Length>8</Length>
+        <Sign>false</Sign>
+      </PmacAddress>
+      <PmacAddress>
+        <Name>M8110</Name>
+        <Type>Y</Type>
+        <Address>78402</Address>
+        <Start>8</Start>
+        <Length>8</Length>
+        <Sign>false</Sign>
+      </PmacAddress>
+    </OutputByte>
+    <InputByte>
+      <PmacAddress>
+        <Name>M8101</Name>
+        <Type>Y</Type>
+        <Address>78400</Address>
+        <Start>8</Start>
+        <Length>8</Length>
+        <Sign>false</Sign>
+      </PmacAddress>
+      <PmacAddress>
+        <Name>M8100</Name>
+        <Type>Y</Type>
+        <Address>78402</Address>
+        <Start>0</Start>
+        <Length>8</Length>
+        <Sign>false</Sign>
+      </PmacAddress>
+    </InputByte>
+  </Params>
+</PmacIOProvider>
+      </Hardware>
+    </Digital>
+  </Drivers>
+</DriverConfig>

@@ -1,0 +1,11 @@
+<AppConfig>
+  <UsedStartupPath>true</UsedStartupPath>
+  <DefaultPath>F:\hucya\QSHP\QSHP\Bin</DefaultPath>
+  <CutFileName>5.12.ctd</CutFileName>
+  <HardWareFileName>config61B.sys</HardWareFileName>
+  <BladeFileName>QS2017110001.drs</BladeFileName>
+  <LastUsedDate>2017-12-08T16:49:06.3140955+08:00</LastUsedDate>
+  <SysConfig>AUTOFOURCE AUTOCUT ANALOG NETCTR SPEECH</SysConfig>
+  <Language>0</Language>
+  <Shutdown>true</Shutdown>
+</AppConfig>
