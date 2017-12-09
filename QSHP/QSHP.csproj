@@ -182,11 +182,11 @@
     <Compile Include="UI\Bld\BladeFileManager.Designer.cs">
       <DependentUpon>BladeFileManager.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Bld\BladeMessageFrom.cs">
+    <Compile Include="UI\Bld\BladeMessageForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Bld\BladeMessageFrom.Designer.cs">
-      <DependentUpon>BladeMessageFrom.cs</DependentUpon>
+    <Compile Include="UI\Bld\BladeMessageForm.Designer.cs">
+      <DependentUpon>BladeMessageForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Bld\BladeRepalceManager.cs">
       <SubType>Form</SubType>
@@ -553,8 +553,8 @@
     <EmbeddedResource Include="UI\Bld\BladeFileManager.resx">
       <DependentUpon>BladeFileManager.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Bld\BladeMessageFrom.resx">
-      <DependentUpon>BladeMessageFrom.cs</DependentUpon>
+    <EmbeddedResource Include="UI\Bld\BladeMessageForm.resx">
+      <DependentUpon>BladeMessageForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Bld\BladeRepalceManager.resx">
       <DependentUpon>BladeRepalceManager.cs</DependentUpon>

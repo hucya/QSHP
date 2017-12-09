@@ -30,18 +30,18 @@ namespace QSHP
                 try
                 {
 
-                    //ProcessCmd.InstallFont();//安装字体
-                    //ProcessCmd.HideWindowDesk();//隐藏桌面
-                    //ProcessCmd.HideLogicalDriver();//隐藏驱动器
-                    //ProcessCmd.NoUsedTaskMgrForm();//关闭任务管理器
-                    //if (ProcessCmd.SetSystytemLoadShell())//设置启动项目
-                    //{
-                    //    ProcessCmd.SetProcessAutoStart(false);//删除重启项目
-                    //}
-                    //else
-                    //{
-                    //    ProcessCmd.SetProcessAutoStart();//如果设置失败就设置自动启动
-                    //}
+                    ProcessCmd.InstallFont();//安装字体
+                    ProcessCmd.HideWindowDesk();//隐藏桌面
+                    ProcessCmd.HideLogicalDriver();//隐藏驱动器
+                    ProcessCmd.NoUsedTaskMgrForm();//关闭任务管理器
+                    if (ProcessCmd.SetSystytemLoadShell())//设置启动项目
+                    {
+                        ProcessCmd.SetProcessAutoStart(false);//删除重启项目
+                    }
+                    else
+                    {
+                        ProcessCmd.SetProcessAutoStart();//如果设置失败就设置自动启动
+                    }
                 }
                 finally
                 {

@@ -487,7 +487,7 @@ namespace QSHP.UI
             form.BtArray[6].Text = "刀破检测";
             form.BtArray[0].Click += delegate (Object se, System.EventArgs arg)
             {
-                ParentForm.PushChildForm(new BladeMessageFrom());
+                ParentForm.PushChildForm(new BladeMessageForm());
             };
             form.BtArray[1].Click += delegate (Object se, System.EventArgs arg)
             {

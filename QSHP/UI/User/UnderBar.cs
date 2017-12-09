@@ -204,9 +204,9 @@ namespace QSHP.UI
             MainForm p = this.ParentForm as MainForm;
             if (p != null)
             {
-                if (p.ChildForm is BladeMessageFrom == false)
+                if (p.ChildForm is BladeMessageForm == false)
                 {
-                    p.PushChildForm(new BladeMessageFrom(), false);
+                    p.PushChildForm(new BladeMessageForm(), false);
                 }
             }
         }
